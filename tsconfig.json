@@ -12,16 +12,21 @@
     "noImplicitReturns": true,
     "alwaysStrict": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "strict": true,
     "strictPropertyInitialization": true,
     "lib": ["ES2020"],
     "typeRoots": [
-      "node_modules/miniprogram-api-typings"
+      "./node_modules/miniprogram-api-typings",
+      "typings"
     ]
   },
   "exclude": [
     "node_modules"
+  ],
+  "include": [
+      "./**/*.ts",
+      "cloudfunctions/**/*.ts"
   ]
 }

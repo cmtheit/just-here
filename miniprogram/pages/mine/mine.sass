@@ -1,0 +1,55 @@
+.countainer
+    #log_in_btn
+        background:
+            color: #2b2bd0
+        color: white
+$primary: cornflowerblue
+#profile_countainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 80vh
+    #portraiture
+        $width: 400rpx
+        width: $width
+        height: $width
+        border:
+            radius: 100%
+            width: 10rpx
+            color: #ee2727
+            style: solid
+        #portraiture_background
+            $relative_pos: -10%
+            position: relative
+            top: $relative_pos
+            left: $relative_pos
+            &, & image
+                background:
+                    color: #2b2bd0ee
+                width: $width
+                height: $width
+                border:
+                    radius: 100%
+            & image
+                opacity: 0
+    #nickName
+        color: $primary
+        font-weight: bold
+        font-size: 2em
+    #buttons
+        margin:
+            top: 80rpx
+        width: 10em
+        text-align: center
+        view
+            margin-bottom: 0.2em
+            border:
+                radius: 20rpx
+                style: solid
+                color: gray
+
+
+
+

@@ -1,0 +1,19 @@
+<view class="countainer">
+    <view id="profile_countainer">
+        <view id="portraiture">
+            <view id="portraiture_background" animation="{{portraitureBackgroundAnimation}}">
+                <image animation="{{portraitureAnimation}}" src="{{app.user.avatarUrl}}" mode="widthFix"> </image>
+            </view>
+        </view>
+        <view wx:if="{{app.user}}" id="nickName">
+            <text>{{app.user.nickName}}</text>
+        </view>
+        <view id="buttons" wx:if="{{app.user}}">
+            <view id="selfInfo" bind:tap="selfInfo">个人资料</view>
+            <view id="opLog"    bind:tap="opLog">操作记录</view>
+        </view>
+    </view>
+    <button wx:if="{{!app.user}}" bind:tap="login" class="button is-primary is-large is-center" id="log_in_btn">登录</button>
+</view>
+
+

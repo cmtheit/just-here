@@ -1,0 +1,114 @@
+$tt_ft_z : 2.4vh;
+#ctn{
+  text-indent: 0.2rem;
+  width: 100%;
+  .resume_infos{
+    box-shadow: 0 3rpx 6rpx 0 rgba(0, 0, 0, 0.15);
+    .resume_title{
+      padding: $tt_ft_z 0 $tt_ft_z 0;
+      font-size: $tt_ft_z;
+      font-weight: bold;
+      text-align: center;
+  }
+}
+}
+
+$mg_l: 2 * $tt_ft_z;
+
+.field{
+  display: flex;
+  font-size: $tt_ft_z * 0.9;
+  margin-bottom: 0.8 * $tt_ft_z;
+  align-items: center;
+  .content{
+    $height: 1.3 * $tt_ft_z;
+    display: inline-block;
+    flex-grow: 1;
+    height: $height;
+    border: 1rpx solid rgba(0,0,0,0.21);
+    border-radius: 4rpx;
+    font-size: 0.75 * $tt_ft_z;
+    font-weight: normal;
+    line-height: $height;
+    vertical-align: middle;
+}
+  &#sex{
+    image{
+      width: 3*$tt_ft_z;
+      display: inline-block;
+      vertical-align: middle;
+  }
+}
+}
+
+.field, .individual_resume{
+  margin-left: $mg_l;
+  margin-right: $mg_l;
+  width: auto;
+}
+
+.individual_resume{
+  padding-bottom: 67rpx;
+  align-self: flex-start;
+  .resume{
+    height: 5*$tt_ft_z;
+    padding-bottom: 67rpx;
+    line-height: 1.2em;
+    margin-top: 0.3 * $tt_ft_z;
+    width: auto;
+    border: 1rpx solid rgba(0,0,0,0.21);
+    font-size: 24rpx;
+    font-weight: normal;
+    text-align: LEFT;
+    background: rgba(255,255,255,0.64);
+}
+}
+
+#dec view{
+  background-color: hsla(234, 100%, 71%, 0.91);
+  border-radius: 50%;
+  width: 156rpx;
+  height: 157rpx;
+  position: absolute;
+  top: calc(490rpx - 157rpx / 2);
+  &:first-of-type{
+    left: -78rpx;
+}
+  &:nth-of-type(2){
+    right: -78rpx;
+}
+}
+
+$qq: rgba(145,96,255,0.64);
+$pp: #ffffff;
+
+.cbt{
+  $height: 73rpx;
+  width: 268rpx !important;
+  background: $qq;
+  border: 2rpx solid #9160ff;
+  border-radius: 12rpx;
+  font-size: 36rpx;
+  font-weight: normal;
+  text-align: CENTER;
+  color: $pp;
+  margin-bottom: 3em;
+}
+.rbts {
+  display: flex;
+  justify-content: space-evenly;
+  .rbt {
+    display: inline-block;
+    &:first-child{
+      color: $qq;
+      background-color: $pp;
+  }
+}
+}
+
+radio-group{
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+  height: 20vh
+}

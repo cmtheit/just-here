@@ -1,0 +1,53 @@
+.countainer #log_in_btn {
+  background-color: #2b2bd0;
+  color: white;
+}
+
+#profile_countainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+}
+#profile_countainer #portraiture {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 100%;
+  border-width: 10rpx;
+  border-color: #ee2727;
+  border-style: solid;
+}
+#profile_countainer #portraiture #portraiture_background {
+  position: relative;
+  top: -10%;
+  left: -10%;
+}
+#profile_countainer #portraiture #portraiture_background, #profile_countainer #portraiture #portraiture_background image {
+  background-color: rgba(43, 43, 208, 0.9333333333);
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 100%;
+}
+#profile_countainer #portraiture #portraiture_background image {
+  opacity: 0;
+}
+#profile_countainer #nickName {
+  color: cornflowerblue;
+  font-weight: bold;
+  font-size: 2em;
+}
+#profile_countainer #buttons {
+  margin-top: 80rpx;
+  width: 10em;
+  text-align: center;
+}
+#profile_countainer #buttons view {
+  margin-bottom: 0.2em;
+  border-radius: 20rpx;
+  border-style: solid;
+  border-color: gray;
+}
+
+/*# sourceMappingURL=mine.wxss.map */
