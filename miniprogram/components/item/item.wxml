@@ -1,0 +1,15 @@
+<view class="_item_ctn">
+    <view>
+        <view class="_item_name">{{name}}</view>
+        <view class="_item_fields">
+            <view class="_item_description">{{description}}</view>
+            <view class="_item_imgs">
+                <imgblkgroup graphUrls="{{graphPathes}}" changeable="{{false}}"> </imgblkgroup>
+            </view>
+        </view>
+        <view class="claim">
+            <button bind:tap="claim">认领</button>
+        </view>
+        <view class="_item_pickerinfo" bind:tap="getPickerInfo">拾捡者信息</view>
+    </view>
+</view>

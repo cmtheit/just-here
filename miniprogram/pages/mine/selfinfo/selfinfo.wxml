@@ -1,39 +1,38 @@
-<view id="dec">
-    <view></view>
-    <view></view>
-</view>
 <view id="ctn" wx:if="{{info}}">
-    <view class="resume_infos">
-        <view class="field">
-            <text>姓名：</text>
-            <view class="content">{{name}}</view>
+    <view id="dec">
+        <view> </view>
+        <view> </view>
+    </view>
+    <view id="info_ctn">
+        <view class="resume_infos">
+            <view class="resume_title">
+                个人资料
+            </view>
+            <view class="field">
+                <text>姓名：</text>
+                <view class="content">{{info.name}}</view>
+            </view>
+            <view class="field">
+                <text>年级：</text>
+                <view class="content">{{info.grade}}</view>
+            </view>
+            <view class="field" id="sex">
+                <text>性别：</text>
+                <image src="{{info.sex === '男' ? '/images/sex/male.png' : '/images/sex/female.png'}}" mode="widthFix"> </image>
+            </view>
+            <view class="field">
+                <text>学号：</text>
+                <view class="content">{{info.student_num}}</view>
+            </view>
+            <view class="field" id="phone">
+                <text>手机号：</text>
+                <view class="content">{{info.phone_num}}</view>
+            </view>
         </view>
-        <view class="field" id="sex">
-            <text>性别：</text>
-            <image src="{{info.sex === '男' ? '/image/sex/male.png' : '/image/sex/female.png'}}" mode="widthFix"> </image>
-        </view>
-        <view class="field">
-            <text>学号：</text>
-            <view class="content">{{info.student_num}}</view>
-        </view>
-        <view class="field">
-            <text>楼号：</text>
-            <view class="content">{{info.address_num}}</view>
-        </view>
-        <view class="field">
-            <text>大类：</text>
-            <view class="content">{{info.major}}</view>
-        </view>
-        <view class="field" id="phone">
-            <text>手机号：</text>
-            <view class="content">{{info.phone_num}}</view>
-        </view>
-        <view class="field">
-            <text>邮箱：</text>
-            <view class="content">{{info.email}}</view>
-        </view>
+        <image src="/images/person.png" mode="widthFix">
+        </image>
     </view>
 </view>
 <view id="noinfo" wx:else="">
-
+    没有个人资料
 </view>

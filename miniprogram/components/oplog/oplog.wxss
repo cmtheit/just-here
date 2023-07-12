@@ -1,0 +1,88 @@
+.ctn {
+  margin: 1% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ctn > view:first-child {
+  border-radius: 0.5em;
+  background-color: rgba(248, 216, 166, 0.51);
+  height: 90%;
+  width: 90%;
+}
+.ctn > view:first-child > view:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.operator {
+  margin-left: 0.8em;
+  margin-top: 0.1em;
+  color: #1c1cc7;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.type {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 0.1em;
+  padding-right: 0.9em;
+  color: #8f0000;
+}
+
+.itemname {
+  margin: 0.4em auto;
+  width: 85%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.more {
+  color: blue;
+  text-align: right;
+  float: right;
+  display: inline-block;
+  margin-right: 0.4em;
+}
+
+.open {
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.open .description {
+  margin-top: 2em;
+  width: 80%;
+  padding: 0.5em;
+  border-style: none none none solid;
+  border-radius: 0.5em;
+  border-color: rgba(227, 161, 161, 0.65);
+}
+.open .map {
+  margin-top: 1em;
+  width: 80%;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.36);
+}
+.open .map map {
+  width: 100%;
+}
+.open .map view {
+  text-align: center;
+  font-weight: bold;
+  color: gray;
+}
+
+.time {
+  font-size: 0.8em;
+  text-indent: 0.7em;
+  color: gray;
+  line-height: 2em;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=oplog.wxss.map */

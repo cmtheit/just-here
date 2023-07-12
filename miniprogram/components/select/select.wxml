@@ -1,0 +1,16 @@
+<view class="countainer" style="color: {{color}}">
+	<view class="show" style="width: {{width}}; background-color: {{background}};" bindtap="on_stretch">
+		<view class="triangle">
+			{{stretch ? "▲" : "▼" }}
+		</view>
+		<view  class="selected">
+			{{selected}}
+		</view>
+	</view>
+	<view class="wraper">
+		<view wx:if="{{stretch}}" bind:select="on_select" class="selections" style="width: {{width}}; background-color: {{background}};">
+			<slot> </slot>
+		</view>
+	</view>
+
+</view>

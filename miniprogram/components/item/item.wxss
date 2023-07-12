@@ -1,0 +1,46 @@
+._item_ctn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 2%;
+}
+._item_ctn > view {
+  border-radius: 0.3em;
+  background-color: rgba(105, 218, 255, 0.52);
+  width: 90%;
+  height: 90%;
+}
+._item_ctn > view ._item_name {
+  font-size: 1.5em;
+  overflow: scroll;
+  text-align: center;
+}
+._item_ctn > view ._item_fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+._item_ctn > view ._item_fields ._item_description {
+  margin: 1em;
+  width: 80%;
+  border-style: none none none solid;
+  border-radius: 1em;
+  border-color: rgba(255, 89, 89, 0.98);
+}
+._item_ctn > view .claim {
+  height: 5em;
+  display: flex;
+  align-items: center;
+}
+._item_ctn > view .claim button {
+  background-color: rgba(255, 89, 89, 0.85);
+  color: rgba(43, 43, 208, 0.75);
+}
+._item_ctn > view ._item_pickerinfo {
+  margin-bottom: 0.4em;
+  text-align: center;
+  text-decoration: underline;
+  color: #00009f;
+}
+
+/*# sourceMappingURL=item.wxss.map */

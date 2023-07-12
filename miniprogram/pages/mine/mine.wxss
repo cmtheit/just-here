@@ -2,6 +2,15 @@
   background-color: #2b2bd0;
   color: white;
 }
+.countainer #fill {
+  position: absolute;
+  top: 40rpx;
+  right: 40rpx;
+}
+.countainer #fill image {
+  width: 70rpx;
+  height: 70rpx;
+}
 
 #profile_countainer {
   display: flex;

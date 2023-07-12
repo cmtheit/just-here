@@ -14,10 +14,10 @@ Page({
         const thispage = this
         wx.getUserProfile({
             desc: "用于确定物件认领者和上传者",
-            success(profile) {
-                thispage.data.app.user = profile.userInfo
+            async success(profile) {
+                getApp().user = profile.userInfo
                 thispage.setData({
-                    app: thispage.data.app
+                    app: getApp()
                 })
                 thispage.data.portraitureBackgroundAnimationGenerator.top('0')
                 thispage.data.portraitureBackgroundAnimationGenerator.left('0')
@@ -29,24 +29,41 @@ Page({
                     portraitureAnimation: thispage.data.portraitureAnimationGenerator.export()
                 })
                 wx.cloud.callFunction({
-                    name: 'getUserInfo'
+                    name: 'getUserDetail',
+                    data: {
+                        userId: (await wx.cloud.callFunction({
+                            name: "getOpenid"
+                            // @ts-ignore
+                        })).result!.openid
+                    }
                 }).then(value => {
                     // @ts-ignore
                     if (value.result.errMsg === 'UnfoundDoc!') {
                         wx.cloud.callFunction({
                             name: 'userRegister'
                         })
-                    } else {
-                        console.log('欢迎回来')
                     }
-                    console.log(value)
                 }).catch()
             }
         })
     },
-    selfInfo(){
+    async selfInfo(){
         wx.navigateTo({
-            url: "./selfinfo/selfinfo"
+            url: "./selfinfo/selfinfo",
+        }).then(async res => {
+            res.eventChannel.emit('userId', {
+                'userId': {
+                    userId: (await wx.cloud.callFunction({
+                        name: "getOpenid"
+                        // @ts-ignore
+                    })).result!.openid
+                }
+            })
+        })
+    },
+    fillinfo() {
+        wx.navigateTo({
+            url: './fillinfo/fillinfo'
         })
     },
     opLog() {

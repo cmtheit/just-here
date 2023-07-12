@@ -1,0 +1,5 @@
+<!-- 图片容器块，若已经选择了图片，则显示改图片的缩略图，否则打开媒体选择或拍摄一张图片 -->
+<view style="width: {{width}}; height: {{width}}; border-radius: calc({{width}} * 0.1)" class="ctn" bind:tap="ontap">
+    <image wx:if="{{src || srctumb}}" style="width:{{width}}; height:{{width}}" src="{{srctumb ? srctumb : src}}"> </image>
+    <view wx:else="" class="plus" style="font-size: calc({{width}} * 0.9)">+</view>
+</view>

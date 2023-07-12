@@ -11,15 +11,9 @@ exports.main = async () => {
     const __ = db.command;
     if (wxContext.OPENID) {
         // 用户已登录，获取用户信息
-        try {
-            return await db.collection('user').doc(wxContext.OPENID).get();
-        }
-        catch (e) {
-            console.log('err', e);
-            return {
-                errMsg: 'UnfoundDoc!'
-            };
-        }
+        return {
+            openid: wxContext.OPENID
+        };
     }
     else {
         return {

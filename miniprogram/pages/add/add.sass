@@ -1,0 +1,129 @@
+#addbtn
+  width: 100vw
+  height: 100vw
+  display: flex
+  align-items: center
+  button
+    padding: 0
+    width: 60%
+    height: 60%
+    color: white
+    font-size: 9em
+    border-radius: 50%
+    background:
+      color: #2b2bd0
+    display: flex
+    align-items: center
+    justify-content: center
+    view
+      width: 100%
+      height: 100%
+      alignment-baseline: center
+pop
+  #icons
+    width: 90%
+    height: 4em
+    margin: auto
+    display: flex
+    z-index: 100
+    align-items: center
+    position: sticky
+    background: white
+    top: 0
+    >view
+      width: 100%
+      display: flex
+      flex-direction: row
+      #setting
+        font:
+          size: 1.2em
+          weight: bold
+        flex-grow: 1
+        color: #2b2bd0
+        text-align: center
+        display: inline-block
+      image
+        width: 54rpx
+        height: 54rpx
+  #fields
+    display: flex
+    align-items: center
+    flex-direction: column
+    .field
+      width: 70%
+      display: flex
+      align-items: center
+      >view.field
+        display: inline-block
+        height: 1.4rem
+      >view:not(.field)
+        flex-grow: 1
+      input
+        flex-grow: 1
+        width: 8em
+      textarea
+        width: 100%
+      input, textarea
+        font:
+          family: Serif, non-Serif
+        color: black
+        &:focus-within
+          border-color: #2b2bd0
+        border:
+          style: solid
+          width: 0.15em
+          radius: 0.1em
+          color: transparent
+        display: inline-block
+
+    #loc
+      flex-direction: column
+      align-items: flex-start
+      vertical-align: center
+      view
+        flex-grow: 1
+      >view:first-child
+        margin-right: 2em
+        display: flex
+        align-items: center
+        justify-content: center
+        image
+          width: 56rpx
+    .field_title
+      font-weight: bold
+      font-size: 1.1em
+    #graphs
+      width: auto
+      font-weight: bold
+      margin-top: 0.4em
+      flex-direction: column
+      align-items: flex-start
+      #ctn
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        border:
+          style: solid
+          color: lightgray
+    [form-type="submit"]
+      margin: 2em
+      background-color: #2b2bd0
+      color: white
+    #cabnet
+      height: 3em
+
+#addlog
+  #addlogtitle
+    z-index: 100
+    position: sticky
+    top: 0
+    color: white
+    font:
+      size: 1.5em
+      weight: normal
+    text-align: center
+    line-height: 2em
+    border:
+      radius: 16rpx 16rpx 0 0
+    background:
+      color: #0330a2

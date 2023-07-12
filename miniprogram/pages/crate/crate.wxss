@@ -1,3 +1,28 @@
+map {
+  width: 100vw;
+  height: 100vh;
+}
 
+pop .head {
+  z-index: 101;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+pop .head #markerTitle {
+  height: 2em;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+pop #back {
+  z-index: 5;
+  height: 30rpx;
+  margin-left: 0.7em;
+  margin-top: 20rpx;
+}
+pop #back image {
+  width: 40rpx;
+}
 
 /*# sourceMappingURL=crate.wxss.map */

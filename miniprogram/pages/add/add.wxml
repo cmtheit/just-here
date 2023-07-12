@@ -1,2 +1,57 @@
-<!--pages/add/add.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view>
+    <view id="addbtn">
+        <button bind:tap="additem">
+            <view>+</view>
+        </button>
+    </view>
+    <form bind:submit="submit">
+        <pop switch="{{add}}" top="10vh" direction="left" z_index="{{1000}}">
+            <view id="icons">
+                <view>
+                    <image id="back" src="/images/back.png" bind:tap="unadditem" mode="heightFix"> </image>
+                    <view id="setting">物件设置</view>
+                </view>
+            </view>
+            <view id="fields">
+                <view class="field">
+                    <view class="field_title">名称：</view>
+                    <input placeholder="物品名称" maxlength="128" name="name"> </input>
+                </view>
+                <view class="field" id="cabnet">
+                    <view class="field_title">储物柜：</view>
+                    <select selected="N/A" width="10em" name="cabinet">
+                        <selection wx:key="value" wx:for="{{cabnets}}" text="{{item.text}}" value="{{item.value}}"> </selection>
+                    </select>
+                </view>
+                <view class="field" id="loc">
+                    <view>
+                        <image src="/images/map.png" mode="widthFix" bind:tap="addloc" wx:if="{{! loc.length}}"> </image>
+                        <view class="field_title"> {{ loc.length ? '当前位置' : '<- 点击获取当前位置'}} </view>
+                    </view>
+                    <view>{{ loc.length && '' ||  loc}}</view>
+                </view>
+                <view class="field" id="graphs">
+                    <view class="field_title">图片（最多九张）</view>
+                    <view id="ctn">
+                        <imgblkgroup width="128rpx" graphUrls="{{ graph}}" bind:addimgs="addimgs"> </imgblkgroup>
+                    </view>
+                </view>
+                <view class="field">
+                    <view>
+                        <view class="field_title">描述：</view>
+                        <textarea placeholder="输入描述（不超过两百字）" maxlength="200" name="description">
+                        </textarea>
+                    </view>
+                </view>
+                <button form-type="submit">添加</button>
+            </view>
+        </pop>
+    </form>
+    <view id="addlog" wx:if="{{app.user}}">
+        <view id="addlogtitle">您的添加记录</view>
+        <view>
+            <oplog wx:key="_id" wx:for="{{logs}}" _id="{{item._id}}">
+            </oplog>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+.countainer{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.triangle{
+	float: right;
+}
+
+.selected{
+	display: inline-block;
+	/* width: 3em; */
+	/* padding-right: 1em; */
+}
+
+.show{
+	border: 1rpx black solid;
+}
+.wraper {
+	position: relative;
+}
+.selections{
+	border: 1rpx black solid;
+	/* width: 5em; */
+    position: absolute;
+
+    max-height: 5em;
+    overflow: scroll;
+	/* background-color: white; */
+	z-index: 1000;
+}
+
+.selections :active{
+	background-color: silver;
+}

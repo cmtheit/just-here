@@ -1,0 +1,120 @@
+#ctn {
+  text-indent: 0.2rem;
+  width: 100%;
+  background: skyblue;
+  height: 100vh;
+  position: absolute;
+}
+#ctn #info_ctn {
+  height: 80%;
+  width: 80%;
+  border-style: none;
+  border-radius: 1em 1em 0 0;
+  background: white;
+  margin: 2em auto;
+  box-shadow: 0 3rpx 10rpx 0 rgba(0, 0, 0, 0.15);
+}
+#ctn #info_ctn .resume_infos .resume_title {
+  padding: 2.4vh 0 2.4vh 0;
+  font-size: 2.4vh;
+  font-weight: bold;
+  text-align: center;
+}
+#ctn #info_ctn > image:last-of-type {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+#ctn #dec view {
+  background-color: hsla(234deg, 100%, 71%, 0.91);
+  border-radius: 50%;
+  width: 156 rpx;
+  height: 157 rpx;
+  position: absolute;
+  top: 411.5rpx;
+}
+#ctn #dec view:first-of-type {
+  left: -78rpx;
+}
+#ctn #dec view:nth-of-type(2) {
+  right: -78rpx;
+}
+
+.field {
+  display: flex;
+  font-size: 2.16vh;
+  margin-bottom: 1.92vh;
+  align-items: center;
+}
+.field .content {
+  display: inline-block;
+  flex-grow: 1;
+  height: 3.12vh;
+  border: 1rpx solid rgba(0, 0, 0, 0.21);
+  border-radius: 4rpx;
+  font-size: 1.8vh;
+  font-weight: normal;
+  line-height: 3.12vh;
+  vertical-align: middle;
+}
+.field#sex image {
+  width: 7.2vh;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.field, .individual_resume {
+  margin-left: 4.8vh;
+  margin-right: 4.8vh;
+  width: auto;
+}
+
+.individual_resume {
+  padding-bottom: 67rpx;
+  align-self: flex-start;
+}
+.individual_resume .resume {
+  height: 12vh;
+  padding-bottom: 67rpx;
+  line-height: 1.2em;
+  margin-top: 0.72vh;
+  width: auto;
+  border: 1rpx solid rgba(0, 0, 0, 0.21);
+  font-size: 24rpx;
+  font-weight: normal;
+  text-align: LEFT;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.cbt {
+  width: 268rpx !important;
+  background: rgba(145, 96, 255, 0.64);
+  border: 2rpx solid #9160ff;
+  border-radius: 12rpx;
+  font-size: 36rpx;
+  font-weight: normal;
+  text-align: CENTER;
+  color: #ffffff;
+  margin-bottom: 3em;
+}
+
+.rbts {
+  display: flex;
+  justify-content: space-evenly;
+}
+.rbts .rbt {
+  display: inline-block;
+}
+.rbts .rbt:first-child {
+  color: rgba(145, 96, 255, 0.64);
+  background-color: #ffffff;
+}
+
+#noinfo {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: gray;
+}
+
+/*# sourceMappingURL=selfinfo.css.map */

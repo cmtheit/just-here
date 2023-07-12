@@ -8,11 +8,16 @@ exports.main = async () => {
     const __ = db.command
     if (wxContext.OPENID) {
         // 用户已登录，获取用户信息
+        // @ts-ignore
+        const oplogs: oplogs = []
         try {
-            return await db.collection('user').doc(wxContext.OPENID).get()
+            return await db.collection('oplogs')
+                .where({
+                    _openid: __.eq(wxContext.OPENID),
+                })
+                .get()
         } catch (e) {
-            console.log('err', e)
-            return  {
+            return {
                 errMsg: 'UnfoundDoc!'
             } as UnfoundDoc
         }

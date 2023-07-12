@@ -1,4 +1,7 @@
 <view class="countainer">
+    <view id="fill" bind:tap="fillinfo">
+        <image src="/images/fill.png"> </image>
+    </view>
     <view id="profile_countainer">
         <view id="portraiture">
             <view id="portraiture_background" animation="{{portraitureBackgroundAnimation}}">

@@ -1,0 +1,16 @@
+.ctn {
+  border-width: 0.2em;
+  border-style: solid;
+  border-color: gray;
+  background: silver;
+  display: inline-block;
+}
+.ctn .plus {
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 100%;
+  color: white;
+}
+
+/*# sourceMappingURL=imgblk.wxss.map */

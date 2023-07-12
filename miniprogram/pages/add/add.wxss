@@ -1,3 +1,146 @@
+#addbtn {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  align-items: center;
+}
+#addbtn button {
+  padding: 0;
+  width: 60%;
+  height: 60%;
+  color: white;
+  font-size: 9em;
+  border-radius: 50%;
+  background-color: #2b2bd0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#addbtn button view {
+  width: 100%;
+  height: 100%;
+  alignment-baseline: center;
+}
 
+pop #icons {
+  width: 90%;
+  height: 4em;
+  margin: auto;
+  display: flex;
+  z-index: 100;
+  align-items: center;
+  position: sticky;
+  background: white;
+  top: 0;
+}
+pop #icons > view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+pop #icons > view #setting {
+  font-size: 1.2em;
+  font-weight: bold;
+  flex-grow: 1;
+  color: #2b2bd0;
+  text-align: center;
+  display: inline-block;
+}
+pop #icons > view image {
+  width: 54rpx;
+  height: 54rpx;
+}
+pop #fields {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+pop #fields .field {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+pop #fields .field > view.field {
+  display: inline-block;
+  height: 1.4rem;
+}
+pop #fields .field > view:not(.field) {
+  flex-grow: 1;
+}
+pop #fields .field input {
+  flex-grow: 1;
+  width: 8em;
+}
+pop #fields .field textarea {
+  width: 100%;
+}
+pop #fields .field input, pop #fields .field textarea {
+  font-family: Serif, non-Serif;
+  color: black;
+  border-style: solid;
+  border-width: 0.15em;
+  border-radius: 0.1em;
+  border-color: transparent;
+  display: inline-block;
+}
+pop #fields .field input:focus-within, pop #fields .field textarea:focus-within {
+  border-color: #2b2bd0;
+}
+pop #fields #loc {
+  flex-direction: column;
+  align-items: flex-start;
+  vertical-align: center;
+}
+pop #fields #loc view {
+  flex-grow: 1;
+}
+pop #fields #loc > view:first-child {
+  margin-right: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+pop #fields #loc > view:first-child image {
+  width: 56rpx;
+}
+pop #fields .field_title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+pop #fields #graphs {
+  width: auto;
+  font-weight: bold;
+  margin-top: 0.4em;
+  flex-direction: column;
+  align-items: flex-start;
+}
+pop #fields #graphs #ctn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-style: solid;
+  border-color: lightgray;
+}
+pop #fields [form-type=submit] {
+  margin: 2em;
+  background-color: #2b2bd0;
+  color: white;
+}
+pop #fields #cabnet {
+  height: 3em;
+}
+
+#addlog #addlogtitle {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  color: white;
+  font-size: 1.5em;
+  font-weight: normal;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 16rpx 16rpx 0 0;
+  background-color: #0330a2;
+}
 
 /*# sourceMappingURL=add.wxss.map */

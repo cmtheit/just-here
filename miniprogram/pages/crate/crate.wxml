@@ -1,1 +1,12 @@
-<view>Crate...</view>
+<map setting="{{mapSetting}}" markers="{{markers}}" longitude="{{longitude}}" latitude="{{latitude}}" bindcallouttap="onCalloutTap"> </map>
+<pop wx:key="id" wx:for-item="marker" top="20vw" wx:for="{{markers}}" width="87%" switch="{{showItem === marker.id}}">
+    <view class="head">
+        <view id="back">
+            <image src="/images/back.png" mode="widthFix" bind:tap="back"> </image>
+        </view>
+        <view id="markerTitle">{{marker.title}}</view>
+    </view>
+    <view wx:for="{{marker.items}}" bind:getPickerInfo="onGetPickerInfo" bind:claimItem="onClaimItem">
+        <item _id="{{item}}"> </item>
+    </view>
+</pop>

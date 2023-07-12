@@ -1,15 +1,43 @@
 #ctn {
   text-indent: 0.2rem;
   width: 100%;
+  background: skyblue;
+  height: 100vh;
+  position: absolute;
 }
-#ctn .resume_infos {
-  box-shadow: 0 3rpx 6rpx 0 rgba(0, 0, 0, 0.15);
+#ctn #info_ctn {
+  height: 80%;
+  width: 80%;
+  border-style: none;
+  border-radius: 1em 1em 0 0;
+  background: white;
+  margin: 2em auto;
+  box-shadow: 0 3rpx 10rpx 0 rgba(0, 0, 0, 0.15);
 }
-#ctn .resume_infos .resume_title {
+#ctn #info_ctn .resume_infos .resume_title {
   padding: 2.4vh 0 2.4vh 0;
   font-size: 2.4vh;
   font-weight: bold;
   text-align: center;
+}
+#ctn #info_ctn > image:last-of-type {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+#ctn #dec view {
+  background-color: hsla(234deg, 100%, 71%, 0.91);
+  border-radius: 50%;
+  width: 156 rpx;
+  height: 157 rpx;
+  position: absolute;
+  top: 411.5rpx;
+}
+#ctn #dec view:first-of-type {
+  left: -78rpx;
+}
+#ctn #dec view:nth-of-type(2) {
+  right: -78rpx;
 }
 
 .field {
@@ -58,21 +86,6 @@
   background: rgba(255, 255, 255, 0.64);
 }
 
-#dec view {
-  background-color: hsla(234deg, 100%, 71%, 0.91);
-  border-radius: 50%;
-  width: 156rpx;
-  height: 157rpx;
-  position: absolute;
-  top: 411.5rpx;
-}
-#dec view:first-of-type {
-  left: -78rpx;
-}
-#dec view:nth-of-type(2) {
-  right: -78rpx;
-}
-
 .cbt {
   width: 268rpx !important;
   background: rgba(145, 96, 255, 0.64);
@@ -97,11 +110,11 @@
   background-color: #ffffff;
 }
 
-radio-group {
-  margin-top: 2em;
-  display: flex;
-  justify-content: space-around;
-  height: 20vh;
+#noinfo {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: gray;
 }
 
 /*# sourceMappingURL=selfinfo.wxss.map */

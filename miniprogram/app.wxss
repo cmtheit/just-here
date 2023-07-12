@@ -1,3 +1,11 @@
-
+.elastic {
+  transition-timing-function: cubic-bezier(0.19, 6.98, 0.08, -2.53);
+  transition-duration: 0.3s;
+}
+.elastic:active {
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+  transform: scale(0.93);
+}
 
 /*# sourceMappingURL=app.wxss.map */

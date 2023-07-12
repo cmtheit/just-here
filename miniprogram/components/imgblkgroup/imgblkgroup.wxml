@@ -1,0 +1,6 @@
+<view class="ctn">
+    <view class="imgs" style="width: calc(({{width}} + 0.2em*2) * {{perline}})">
+        <imgblk wx:key="src" wx:for="{{graphUrls}}" src="{{item.src}}" srctumb="{{item.srctumb}}" width="{{width}}"> </imgblk>
+        <imgblk wx:if="{{changeable && length < maxlength}}" width="{{width}}" emptychoose="{{false}}" bind:addimg="addimg"> </imgblk>
+    </view>
+</view>

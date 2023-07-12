@@ -1,0 +1,3 @@
+<view bindtap="on_tap">
+	{{text}}
+</view>

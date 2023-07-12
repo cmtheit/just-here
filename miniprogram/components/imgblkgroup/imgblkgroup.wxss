@@ -1,0 +1,7 @@
+.ctn .imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=imgblkgroup.wxss.map */

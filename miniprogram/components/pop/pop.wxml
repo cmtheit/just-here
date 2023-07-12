@@ -1,0 +1,10 @@
+<!--提供组件内容从某个方向弹入弹出的效果-->
+<!--若想以动画形式演绎组件的离开，需要在组件内触发 pre_lv 事件-->
+<view class="ctn" style="z-index: {{Z_INDEX}}; background-color: {{transparent}};" bind:pre_lv="on_pre_lv" animation="{{bganime}}">
+    <!--需讨论进入动画和离开动画-->
+    <view animation="{{animation}}" style="{{origin_pos}};  " bind:transitionend="ontransitionend">
+        <view style="width: {{width}};  border-radius: {{border_radius}};  background-color: {{ctn_background}};  max-height: calc(90vh - {{top}}); overflow: scroll" >
+            <slot> </slot>
+        </view>
+    </view>
+</view>

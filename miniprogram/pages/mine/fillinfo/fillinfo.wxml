@@ -1,0 +1,38 @@
+<view id="dec">
+    <view></view>
+    <view></view>
+</view>
+<form bind:submit="submit">
+    <view id="my_resume_infos">
+        <view id="my_resume_title">个人资料</view>
+        <view class="field">
+            <text>姓名：</text>
+            <input placeholder="请输入您的姓名" name="name" value="{{resume.name}}" maxlength="32"> </input>
+        </view>
+        <view class="field" id="sex">
+            <text>性别：</text>
+            <select name="sex" width="4em" value="{{resume.sex}}" selected="N/A">
+                <selection wx:for="{{sexlist}}" value="{{item.value}}" wx:key="value" text="{{item.text}}">
+                </selection>
+            </select>
+        </view>
+        <view class="field" id="grade">
+            <text>年级：</text>
+            <select name="grade" width="4em" value="{{resume.grade}}" selected="N/A">
+                <selection wx:for="{{gradelist}}" value="{{item.value}}" wx:key="value" text="{{item.text}}">
+                </selection>
+            </select>
+        </view>
+        <view class="field">
+            <text>学号：</text>
+            <input placeholder="请输入11位学号" type="number" name="student_num" value="{{resume.student_num}}"> </input>
+        </view>
+        <view class="field" id="phone">
+            <text>手机号：</text>
+            <input placeholder="请输入常用手机号" type="text" name="phone_num" value="{{resume.phone_num}}" pattern="[0-9]{11}"> </input>
+        </view>
+        <button form-type="submit" id="save_resume" wx:if="{{app.user}}">
+            <view>保存</view>
+        </button>
+    </view>
+</form>

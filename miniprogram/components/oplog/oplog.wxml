@@ -1,0 +1,25 @@
+<view class="ctn {{open && ' ' || 'elastic'}}">
+    <view>
+        <view>
+            <view wx:if="{{showoperator}}" class="operator">{{operatorName}}</view>
+            <view class="type">{{type === 'pick' && '拾取' || '认领'}} </view>
+        </view>
+        <view class="itemname">{{itemName}}</view>
+        <view class="open" wx:if="{{open}}">
+            <imgblkgroup graphUrls="{{graphicUrls}}" changeable="{{false}}">
+            </imgblkgroup>
+            <view class="description">{{description}}</view>
+            <view class="map">
+                <map wx:if="{{loc}}" longitude="{{loc.longitude}}" latitude="{{loc.latitude}}" markers="{{[{id: 10, latitude: loc.latitude, longitude: loc.longitude, title: itemName, width: '40', height: '60'}]}}">拾取地点</map>
+                <view wx:else="">没有位置信息</view>
+            </view>
+            <view>
+                储物柜：{{cabinet}}
+            </view>
+        </view>
+        <view class="time">{{time}}</view>
+        <view class="more" bind:tap="stretch">{{open && '收起'||'查看更多'}}</view>
+    </view>
+</view>
+
+

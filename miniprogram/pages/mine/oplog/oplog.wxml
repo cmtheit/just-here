@@ -1,1 +1,13 @@
-oplog.WXML
+<view>
+    <view id="title" dragable="true">
+        操作记录
+    </view>
+    <view id="oplogs">
+        <view wx:key="_id" wx:for="{{oplogs}}">
+            <oplog _id="{{item._id}}"> </oplog>
+        </view>
+    </view>
+    <view id="nooplog" wx:if="{{!oplogs.length}}">
+        暂无操作记录
+    </view>
+</view>

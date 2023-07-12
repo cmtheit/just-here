@@ -36,7 +36,7 @@
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#2140bb",
         "navigationBarTitleText": "就这儿",
-        "navigationBarTextStyle": "black"
+        "navigationBarTextStyle": "white"
 	},
 	"subPackages": [{
 		"root": "pages/mine/selfinfo",
@@ -48,7 +48,29 @@
 		"pages": [
 			"oplog"
 		]
-	}],
+	}, {
+      "root": "pages/mine/fillinfo",
+      "pages": [
+        "fillinfo"
+      ]
+    }],
+    "usingComponents": {
+      "pop": "components/pop/pop",
+      "select": "components/select/select",
+      "selection": "components/selection/selection",
+      "item": "components/item/item",
+      "imgblk": "components/imgblk/imgblk",
+      "imgblkgroup": "components/imgblkgroup/imgblkgroup",
+      "oplog": "components/oplog/oplog"
+    },
+    "requiredPrivateInfos": [
+        "getLocation"
+    ],
+    "permission": {
+        "scope.userLocation": {
+          "desc": "你的位置信息将用于确定失物地点"
+        }
+      },
     "sitemapLocation": "sitemap.json",
     "style": "v2"
 }
